@@ -1,6 +1,5 @@
 package Elevator;
 
-import Elevator.ElevatorCar;
 import LiftModels.LiftMovement;
 
 import java.util.Collections;
@@ -36,7 +35,7 @@ public class ElevatorController {
         }
 
         // If lift is going up
-        if (elevatorCar.getLiftMovement().equals(LiftMovement.UP)) {
+        else if (elevatorCar.getLiftMovement().equals(LiftMovement.UP)) {
             while (!moveUp.isEmpty()) {
                 int nextFloor = moveUp.poll();
                 System.out.println("Moving up to floor " + nextFloor);
@@ -53,7 +52,7 @@ public class ElevatorController {
         }
 
         // If lift is going down
-        if (elevatorCar.getLiftMovement().equals(LiftMovement.DOWN)) {
+        else if (elevatorCar.getLiftMovement().equals(LiftMovement.DOWN)) {
             while (!moveDown.isEmpty()) {
                 int nextFloor = moveDown.poll();
                 System.out.println("Going down to floor " + nextFloor);
